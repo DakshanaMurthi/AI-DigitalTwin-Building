@@ -9,7 +9,10 @@ from app.api.routes.prediction_routes import router as prediction_router
 from app.api.routes.websocket_routes import router as websocket_router
 from app.api.routes.occupancy_count_routes import router as occupancy_router
 from app.api.routes.gas_routes import router as gas_router
+from app.api.routes.auth import router as auth_router
 
+
+# api_router = APIRouter()
 
 api_router = APIRouter()
 
@@ -82,3 +85,8 @@ api_router.include_router(
 api_router.include_router(
     websocket_router
 )
+
+# ==========================
+# Authentication APIs
+# ==========================
+api_router.include_router(auth_router)
