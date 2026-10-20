@@ -1,2 +1,7 @@
 fastapi[all]==0.141.1
 uvicorn[standard]==0.53.0
+
+pwdlib[argon2]
+PyJWT
+
+email-validator
